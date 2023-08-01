@@ -1,0 +1,31 @@
+.MainPosts {
+  .backBtn {
+    display: flex;
+    background: none;
+    font-size: 25px;
+    border: none;
+    margin: 12px;
+    cursor: pointer;
+    color: #323232;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-weight: 500;
+
+    margin-left: -0.2rem;
+
+    &:hover {
+      color: #1D71B8;
+    }
+  }
+
+  .box {
+    max-height: 700px;
+    height: 100%;
+    overflow-x: hidden;
+
+    .Imgs {
+      width: 184px;
+      margin: 4px;
+    }
+  }
+}

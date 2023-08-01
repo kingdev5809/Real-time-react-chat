@@ -1,0 +1,287 @@
+.modalMain {
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  padding: 0 15px;
+  position: fixed;
+}
+
+.modalM {
+  position: fixed;
+}
+
+.circle {
+  position: absolute;
+  z-index: -1;
+  right: -20%;
+  bottom: -50%;
+}
+
+.centered {
+  background: #f5f5f7;
+  max-width: 1050px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.modal {
+  margin: 0 auto;
+  z-index: 10;
+  border-radius: 12px 0px 12px 12px;
+  background: #fcfcfc;
+  padding: 5px 5px 0 10px;
+  box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.15);
+}
+
+.closeBtnCon {
+  position: absolute;
+  padding: 18px;
+  border-radius: 0px 12px 12px 0px;
+  background: #fcfcfc;
+  right: -84px;
+  top: 0;
+}
+
+.closeBtn {
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 26px;
+  border: 1px solid #1d71b8;
+  color: #1d71b8;
+  background: #fcfcfc;
+  font-weight: 500;
+  padding: 10px 10px 5px 10px;
+  outline: none;
+}
+
+/*--------------Modal Content--------*/
+
+.modalContent {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+
+  /*------------Left ------------*/
+  .modalChatUsers {
+    margin-top: 10px;
+    width: 40%;
+    /*--------------------Search--------------*/
+    .modalChatUsersSearch {
+      form {
+        display: flex;
+      }
+
+      input {
+        background: #ffffff;
+        border: 1px solid #1d71b8;
+        border-radius: 8px;
+        padding: 10px;
+        max-width: 540px;
+        width: 100%;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: #808080;
+      }
+
+      button {
+        border: none;
+        background-color: #1d71b8;
+        border-radius: 8px;
+        padding: 10px 24px;
+        margin-left: -10px;
+        cursor: pointer;
+      }
+
+      button img {
+        margin-bottom: -5px;
+      }
+    }
+
+    .modalChatUsersList {
+      width: 100%;
+      border-top: 1px solid #cdcdcd;
+      margin-top: 20px;
+
+      .box {
+        max-height: 520px;
+        height: 100%;
+        overflow-x: hidden;
+        margin-bottom: 10px;
+
+        .userBlock {
+          width: 100%;
+          padding: 10px 10px 10px 4px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid #cdcdcd;
+          cursor: pointer;
+          .userInfo {
+            display: flex;
+            align-items: center;
+            .userLogo {
+              width: 50px;
+              border-radius: 50px;
+            }
+            .userNameDescription {
+              display: grid;
+              margin-left: 15px;
+
+              .userName {
+                font-family: "Montserrat";
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 12px;
+                color: #323232;
+                margin-bottom: 3px;
+              }
+
+              .userDescription {
+                font-family: "Montserrat";
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 14px;
+                margin-top: 4px;
+                color: #323232;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+
+          .userActiveTime {
+            width: 60px;
+            margin-right: 10px;
+            display: grid;
+            align-items: center;
+
+            .userTime {
+              margin-left: 1rem;
+              margin-bottom: 4px;
+            }
+
+            img {
+              margin-left: 26px;
+            }
+          }
+
+          &:hover {
+            transition: 0.3ms ease-in;
+            background: linear-gradient(
+                101.5deg,
+                rgba(255, 255, 255, 0.2) 0%,
+                rgba(29, 113, 184, 0.2) 100%
+              ),
+              #ffffff;
+          }
+          &.active {
+            background: #1d71b8;
+            .userInfo {
+              .userName {
+                color: #fff;
+              }
+            }
+            .userActiveTime {
+              .userTime {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*---------Right------------*/
+  .modalChatContent {
+    max-width: 795px;
+    width: 90%;
+    margin: 10px auto;
+    overflow: hidden;
+
+    .modalChatContentHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .userInfo {
+        max-width: 340px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        line-height: 18px;
+        margin-bottom: 5px;
+
+        .userLogo {
+          width: 45px;
+        }
+
+        .userNameAndStatus {
+          margin-left: 1rem;
+          align-items: center;
+
+          .userName {
+            span {
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 16px;
+              font-family: "Montserrat";
+              color: #323232;
+            }
+          }
+
+          .userStatus {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 12px;
+            font-family: "Montserrat";
+            display: block;
+            color: #323232;
+          }
+        }
+      }
+
+      .threeDots {
+        margin-bottom: 10px;
+        font-size: 26px;
+        color: #323232;
+        line-height: 18px;
+        cursor: pointer;
+
+        :hover {
+          color: #1d71b8;
+          font-weight: 500;
+          transition: 0.3ms ease-in-out;
+        }
+      }
+    }
+
+    .modalMessageContainer {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  margin-top: 6px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d71b8;
+  border-radius: 8px;
+}

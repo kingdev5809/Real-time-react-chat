@@ -1,0 +1,90 @@
+.filesContainer {
+    position: relative;
+    width: 105%;
+    height: 98%;
+
+    scroll-behavior: smooth;
+
+    .imgBlock {
+
+        margin: 0.5rem 0px 0px 0.5rem;
+    }
+
+    .backBtn {
+        display: flex;
+        background: none;
+        font-size: 25px;
+        border: none;
+        margin: 12px;
+        cursor: pointer;
+        color: #323232;
+        align-items: center;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        margin-left: -0.4rem;
+
+        &:hover {
+            color: #1D71B8;
+        }
+    }
+
+    .box {
+        max-height: 700px;
+        height: 100%;
+        overflow-x: hidden;
+
+        .filesBlock {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            margin-top: 1rem;
+            width: 96%;
+            height: 150px;
+            background: #fff;
+            border-radius: 0px;
+
+            .txtBlock {
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                margin-left: 1.5rem;
+
+                span {
+                    font-family: 'Montserrat';
+                    margin-top: 0.7rem;
+
+                }
+
+                .fileName {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: #323232;
+                }
+
+                .filesize {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 18px;
+                    color: #323232;
+                }
+
+                .uploadedDate {
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 18px;
+                    color: #cdcdcd;
+                }
+            }
+
+            &:hover {
+                transition: 0.3ms ease-in;
+                background: linear-gradient(101.5deg, rgba(255, 255, 255, 0.2) 0%, rgba(29, 113, 184, 0.2) 100%), #FFFFFF;
+            }
+        }
+    }
+}
